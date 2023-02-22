@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  En el juego de casino Blackjack el jugador puede sacarle
+       ventaja a la casa llevando un registro del numero relativo
+       de cartas altas y bajas que quedan en la baraja.
+
+       Esto se llama "conteo de cartas"
+
+       Tener mas cartas altas en la baraja es una ventaja para el jugador. 
+       Se le asigna un valor a cada carta de acuerdo a la siguiente tabla:
+
+       - Cuando el conteo es positivo, el jugador deberia apostar alto
+       - Cuando el conteo es 0 o negativo, el jugador deberia apostar bajo
+
+       Cambio del conteo        Cartas 
+       ------------------------------------
+       +1                       2,3,4,5,6
+       0                        7,8,9
+       -1                       10,'J','Q','K','A'
+
+       Nuestra meta es definir una funcion para contar cartas.
+
+       La funcion debe tomar un parametro carta que puede ser
+       un numero o una cadena de caracteres y luego aumentar
+       o reducir el valor de la variable global conteo
+       de acuerdo al valor de la carta.
+
+       La funcion debe retornar una cadena de caracteres con el conteo
+       actual y la cadena:
+       - "Apostar" si el conteo es positivo.
+       - "Esperar" si el conteo es cero o negativo.
+
+       El conteo actual y la decision del jugador
+       ("Apostar" o "Esperar") deben estar separados por un espacio.
+
+        */
+
+let count = 0;
+
+function CardsCount(card) {
+    const cardsAdd = [2, 3, 4, 5, 6];
+    const cardsSub = [10, "J", "Q", "K", "A"];
+
+    if (cardsAdd.includes(card)) {
+        count++;
+    } else if (cardsSub.includes(card)) {
+        count--;
+    }
+
+    return `${count} ${(count > 0) ? "Apostar" : "Esperar"}`;
+}
+
+ 
+document.write("<Br>", CardsCount(2));
+document.write("<Br>", CardsCount(3));
+document.write("<Br>", CardsCount(7));
+document.write("<Br>", CardsCount("K"));
+document.write("<Br>", CardsCount("A"));
+
+      
+    </script>
+</body>
+</html>
