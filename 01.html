@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  Define una funcion proximoEnLaFila que tome un arreglo
+        y un numero como argumentos. 
+        Agrega el numero al final del arreglo y luego elimina el
+        primer elemento del arreglo. La funcion debe retornar
+        el elemento que fue removido
+        
+        */
+let MyArray = [1,2,3,4,5];
+
+function proximoEnLaFila(arr,elem){
+arr.push(elem)
+return arr.shift()
+}
+
+document.write("Array original ",MyArray);
+
+proximoEnLaFila(MyArray,6)
+
+document.write("<br> Array modificado ",MyArray);
+
+      
+    </script>
+</body>
+</html>
