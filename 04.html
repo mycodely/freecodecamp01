@@ -10,22 +10,22 @@
     <script>
        /*  
        Tenemos un objeto que representa parte de una coleccion
-       de targetDiskes musicales.
+       de Albumes musicales.
        
-       Cada targetDisk tiene un numero de identificacion unico(id)
+       Cada Album tiene un numero de identificacion unico(id)
        asociado a otras propiedades
 
-       No todos los targetDiskes tienen la informacion completa
+       No todos los album tienen la informacion completa
         */
 
         var coleccionDeDiscos = {
   7853: {
-    tituloDeltargetDisk: "Bee Gees Greatest",
+    tituloDelAlbum: "Bee Gees Greatest",
     artista: "Bee Gees",
     canciones: ["Stayin' Alive"]
   },
   5439: {
-    tituloDeltargetDisk: "ABBA Gold"
+    tituloDelAlbum: "ABBA Gold"
   }
 };
 
@@ -88,7 +88,7 @@ function updateDisk(disk, id, property, value) {
 updateDisk(coleccionDeDiscos, 1010); //test
 
 console.log(coleccionDeDiscos);
-updateDisk(coleccionDeDiscos, 7853, "tituloDeltargetDisk", "");
+updateDisk(coleccionDeDiscos, 7853, "tituloDelAlbum", "");
 console.log(coleccionDeDiscos);
 
 updateDisk(coleccionDeDiscos, 5439, "canciones", "Mamma Mia");
