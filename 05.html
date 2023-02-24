@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+const contacts = [
+  {
+    "name": "Nora",
+    "lastname": "Nav",
+    "number": "0543236543",
+    "hobbies": ["Pizza", "Programación"]
+  },
+  {
+    "name": "Harry",
+    "lastname": "Potter",
+    "number": "0994372684",
+    "hobbies": ["Hogwarts", "Magia"]
+  },
+  {
+    "name": "Sherlock",
+    "lastname": "Holmes",
+    "number": "0487345643",
+    "hobbies": ["Casos interesantes", "Violín"]
+  }
+];
+
+function search(name, prop) {
+  const contact = contacts.find(contact => contact.name === name);
+  if (!contact) {
+    return "El contacto no está en la lista";
+  }
+  return contact[prop] ?? "La propiedad no existe";
+}
+  
+console.log(search("Nora", "hobbies"));
+console.log(search("Harry", "lastname"));
+console.log(search("Sherlock", "number"));
+console.log(search("Nora", "addres")); // La propiedad no existe.
+console.log(search("Bob", "number"));     // El contacto no existe.
+
+
+      
+    </script>
+</body>
+</html>
