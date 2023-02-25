@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+Características:
+- Se usa el acento invertido (backtick) ` en lugar de comillas.
+- Pueden contener comillas simples y dobles.
+- Las líneas se preservan como se escriben en el código.
+- Para reemplazar una variable se escribe ${variable}.
+- Dentro de ${} también puedes escribir expresiones.
+*/
+
+
+const a = 6;
+console.log(`El valor de a es ${a}.`);
+
+const nombre = "Nora";
+const edad = 6;
+console.log(`Mi nombre es ${nombre} y tengo ${edad} años.`);
+
+const miArreglo = [1, 2, 3, 4];
+console.log(`El arreglo es: ${JSON.stringify(miArreglo)}`);
+
+// Ejemplo con objeto
+
+const persona = {
+nombre: "Gino Cass",
+edad: 10
+};
+
+const saludo = `¡Hola! Mi nombre es ${persona.nombre} y tengo ${persona.edad} años.`;
+
+console.log(saludo);
+
+
+      
+    </script>
+</body>
+</html>
