@@ -26,11 +26,12 @@ const myMusic = [
 ];
 
 
-function addData(artist,t1,release_year,formats,element2) {
+function addData(artist,t1,release_year,formats,gold) {
 myMusic.artist = artist;
 myMusic.title = t1;
 myMusic.release_year = release_year;
 myMusic.formats = formats;
+myMusic.gold = gold;
 
 }
 addData()
