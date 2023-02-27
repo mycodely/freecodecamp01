@@ -26,21 +26,18 @@ const contacts = [
   },
 ];
 
-function lookUpProfile(name, prop) {
+const lookUpProfile = (name, prop) => {
 
-  // Only change code below this line
-for (let i = 0; i < contacts.length; i++) {
-    const contact = contacts[i];
-    
-    if (contact.firstName === name) {
-      if (contact.hasOwnProperty(prop)) {
-        return contact[prop];
-      } else {
-        return "No such property";
-      }
+    // Valida inicialmente el contacto
+    const contact = contacts.find((c) => c.firstName === name);
+  
+    if (!contact) {
+      return "No such contact";
     }
-  }
-  return "No such contact";
+
+  // Pregunta por el valor de la propiedad, retorna el valor mismo o sino existe
+    return contact[prop] !== undefined ? contact[prop] : "No such property";
+  };
 
 
   // Only change code above this line
