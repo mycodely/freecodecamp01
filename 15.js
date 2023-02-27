@@ -1,3 +1,15 @@
+/*
+
+function multiplyAll(arr) {
+  return arr.reduce((product, innerArr) => {
+    return innerArr.reduce((innerProduct, num) => innerProduct * num, product);
+  }, 1);
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+*/
+
 function multiplyAll(arr) {
   var product = 1;
   // Only change code below this line
