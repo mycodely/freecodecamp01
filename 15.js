@@ -2,7 +2,7 @@
 
 function multiplyAll(arr) {
   return arr.reduce((product, innerArr) => {
-    return innerArr.reduce((innerProduct, num) => innerProduct * num, product);
+    return innerArr.reduce((innerProduct, num) => innerProduct * num, product); // Calcula el producto de cada sub-array y multiplica por total acumulado
   }, 1);
 }
 
